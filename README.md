@@ -54,8 +54,8 @@ brihasira-ecommerce/
 ### 🔹 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/brihasira-ecommerce.git
-cd brihasira-ecommerce
+git clone https://github.com/yourusername/ecommerce.git
+cd ecommerce
 ```
 
 ---
