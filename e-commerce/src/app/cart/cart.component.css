@@ -1,0 +1,38 @@
+.mat-table-custom {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+tr:hover {
+    background-color: #dbe3ea;
+}
+
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    
+   
+    text-align: left;
+    padding: 12px;
+}
+.checkOut:hover{
+    background: linear-gradient(to right, #3949AB, #1E88E5);
+    box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.6);
+}
+.checkOut{
+    background-color: red;
+    color: white;
+}
+button[disabled] {
+    opacity: 0.5;  /* Make it look faded */
+    cursor: not-allowed; /* Change the cursor */
+    pointer-events: none; /* Prevent clicks */
+  }

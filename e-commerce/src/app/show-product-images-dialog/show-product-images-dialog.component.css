@@ -1,0 +1,22 @@
+/* Grid Tile Styling */
+.image-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents overflow issues */
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+  
+  /* Ensures Image is Fully Visible */
+  .grid-image {
+    height: 220px;  /* Ensures all images are the same height */
+   width: 100%;    /* Ensures image fills the card width */
+   object-fit: cover; /* Crops and fits the image properly */
+   border-radius: 5px;
+   transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .grid-image:hover {
+    transform: scale(1.05);
+  }

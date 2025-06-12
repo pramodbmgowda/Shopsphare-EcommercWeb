@@ -1,0 +1,166 @@
+/* .product-information{
+    font-size: medium;
+}
+
+.price{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+.discountPrice{
+    font-weight: bold;
+    color: red;
+    font-size: 18px;
+
+}
+.actualtPrice{
+    text-decoration: line-through;
+    color: #5f0d0d;
+    margin-left: 10px;
+    
+}
+
+.price ::before{
+    content:"Rs.";
+    font-weight: bold;
+
+}
+.name{
+    font-weight: bold;
+    font-size: large;
+}
+.buynowbtn{
+    margin-top: 20px;
+    color: white;
+    background-color: blue;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.image-container{
+    height: 500px;
+    justify-content: center;
+
+}
+.product-zoom-image{
+
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+    
+} */
+
+
+
+
+
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image-container {
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-zoom-image {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-zoom-image:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.thumbnail-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.active-thumbnail {
+    border: 2px solid #d32f2f;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #555;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.discountPrice {
+    color: #d32f2f;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.actualPrice {
+    text-decoration: line-through;
+    color: grey;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.buynowbtn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.buynowbtn:hover {
+    background: linear-gradient(to right, #3949AB, #1E88E5);
+    box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.6);
+}
+.addtocart{
+    margin-left: 25px;
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+}
+.addtocart:hover{
+    background: linear-gradient(to right, #3949AB, #1E88E5);
+    box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.6);
+}

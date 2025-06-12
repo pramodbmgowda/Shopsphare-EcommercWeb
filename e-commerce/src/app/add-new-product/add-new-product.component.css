@@ -1,0 +1,137 @@
+.button-container {
+  display: flex;
+  justify-content:flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+mat-grid-tile {
+  border: 1px solid #eee;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.browse {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.image-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.image-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.remove-btn:hover {
+  background: linear-gradient(to right, #3949AB, #1E88E5);
+  box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.6);
+}
+button{
+  justify-content:space-between;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+button:hover {
+  background: linear-gradient(to right, #3949AB, #1E88E5);
+  box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.6);
+}
+.addproduct{
+  margin-left: 145px;
+  
+}
+.updateproduct{
+  margin-left: 120px;
+}
+.remove {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;  /* Fixed width */
+  height: 24px; /* Fixed height */
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.remove:hover {
+  background: linear-gradient(to right, #3949AB, #1E88E5);
+  box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.6);
+}
+.view-product-text {
+  font-size: 12px;
+  color: #1976d2; 
+  cursor: pointer;
+  margin-top: 15px;
+  text-decoration: underline; 
+  margin-left: 215px;
+}
+
+.view-product-text:hover {
+  color: #125699; 
+}

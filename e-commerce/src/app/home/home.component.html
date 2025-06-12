@@ -1,0 +1,44 @@
+<div class="container mt-5 body">
+  <div class="category-bar">
+    <button (click)="searchByKeyword(searchKeyword.value)">All</button>
+    <button (click)="onClick()">Phones</button>
+    <button (click)="filterByLaptops()">Laptops</button>
+    <button (click)="filterByAirpods()">Airpods</button>
+  </div>
+  <mat-form-field appearance="outline" class="searchbar-custom w-100 ">
+    <mat-label>Search Products</mat-label>
+    <input matInput #searchKeyword (keyup)="searchByKeyword(searchKeyword.value)" placeholder="Type to search...">
+
+    <mat-icon matSuffix>search</mat-icon>
+
+  </mat-form-field>
+
+
+
+
+  <div class="row">
+    <div class="col-md-3 col-sm-6 mb-4" *ngFor="let p of productDetails">
+      <mat-card class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{ p.productName }}</mat-card-title>
+        </mat-card-header>
+        <mat-card></mat-card>
+        <img mat-card-image [src]="p.productImages[0].url" alt="{{ p.productName }}" />
+        <mat-card-content>
+          <p class="product-description">{{ p.productDescription }}</p>
+          <p class="price">
+            <span class="discounted-price">₹{{ p.productDiscountedPrice }}</span>
+            <span class="actual-price">₹{{ p.productActualPrice }}</span>
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="product-actions">
+          <a mat-button color="warn" (click)="showProductDetails(p.productId)">View Details</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="text-center mt-5  " style="padding-bottom: 50px; color: blue;" *ngIf="isShowMoreButton">
+    <button mat-raised-button color="primary" (click)="getAllProducts()">Load more..</button>
+  </div>
+</div>

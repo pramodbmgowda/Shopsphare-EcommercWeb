@@ -1,0 +1,82 @@
+
+.spaced-button {
+  margin-right: 20px;
+}
+.color{
+ color:  #0052cc;
+}
+
+button:hover{
+  background: linear-gradient(to right, #3949AB, #1E88E5);
+    box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.6);
+
+}
+
+.spaceProduct{
+  margin-left: 20px;
+
+}
+.spacePlace{
+  margin-left: 20px;
+}
+.spaceCart{
+  margin-left: 20px; 
+}
+.spaceMyorder{
+  margin-left: 20px; 
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@700&display=swap');
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.unique-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, #283593, #1565C0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Outline for better visibility */
+  text-shadow: -1px -1px 0 #ffffff,  
+               1px -1px 0 #ffffff,  
+               -1px 1px 0 #ffffff,  
+               1px 1px 0 #ffffff,  
+               0 0 10px rgba(25, 118, 210, 0.8),  
+               0 0 20px rgba(25, 118, 210, 0.6);
+
+  padding: 5px 15px;
+  border-radius: 10px;
+  animation: neonGlow 1.5s infinite alternate;
+}
+
+/* Smooth Neon Glow Effect */
+/* @keyframes neonGlow {
+  0% { text-shadow: 0 0 5px rgba(9, 71, 134, 0.8); }
+  100% { text-shadow: 0 0 15px rgb(8, 56, 104), 0 0 25px rgba(25, 118, 210, 1); }
+} */
+
+
+.unique-title{
+  background: linear-gradient(to right, #3949AB, #1E88E5);
+    box-shadow: 0px 0px 10px rgba(33, 150, 243, 0.6);
+
+}
+
+.spaceLogin{
+  margin-right: 20px;
+}
+*{
+  z-index: 1000; /* Ensure it stays above other content */
+}
+.home:hover{
+  background: linear-gradient(45deg, #FFB300, #FFD700);
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+}

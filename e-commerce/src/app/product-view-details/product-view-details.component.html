@@ -1,0 +1,99 @@
+<!-- <div class="container mt-5">
+
+    <div class="row">
+        <div class="col-6">
+
+            <div class="card image-container p-3">
+                <img [src]="product.productImages[selectedProductIndex].url  " class="product-zoom-image">
+
+            </div>
+            <div class="mt-2">
+                <mat-grid-list cols="3" gutterSize="10px" row="1:1" class="productImage">
+                    <mat-grid-tile *ngFor="let file of product.productImages ; let i = index" (click)="changeIndex(i)"
+                        style="border: 1px solid lightgrey">
+                        <img [src]="file.url" height="100px">
+                    </mat-grid-tile>
+                </mat-grid-list>
+
+
+
+            </div>
+
+        </div>
+
+
+        <div class="col-6">
+            <div class="product_information">
+
+                <div class="mt-3" class="name">
+                    {{product.productName}}
+                </div>
+                <div class="mt-3">
+                    <b>Description:</b> <br>
+                    {{product.productDescription}}
+                </div>
+
+                <div class="price">
+                    <span class="discountPrice"> {{product.productDiscountedPrice}}
+                    </span>
+                    <span class="actualtPrice"> {{product.productActualPrice}}
+                    </span>
+
+                </div>
+                <div class="buynow">
+
+                    <button mat-raised-button class="buynowbtn">Buy now</button>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div> -->
+
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Product Image & Gallery -->
+        <div class="col-lg-6">
+            <div class="card image-container p-3">
+                <img [src]="product.productImages[selectedProductIndex].url" class="product-zoom-image">
+            </div>
+            <div class="mt-3 text-center">
+                <mat-grid-list cols="4" gutterSize="10px" rowHeight="100px" class="productImage">
+                    <mat-grid-tile *ngFor="let file of product.productImages; let i = index" (click)="changeIndex(i)"
+                        [ngClass]="{'active-thumbnail': selectedProductIndex === i}"
+                        style="border: 1px solid lightgrey; cursor: pointer;">
+                        <img [src]="file.url" class="thumbnail-image">
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-lg-6">
+            <div class="product_information">
+                <h2 class="product-name mt-3">{{ product.productName }}</h2>
+                <p class="product-description mt-2">
+                    <b>Description:</b> <br>
+                    {{ product.productDescription }}
+                </p>
+
+                <div class="price mt-3">
+                    <span class="discountPrice">Rs. {{ product.productDiscountedPrice }}</span>
+                    <span class="actualPrice">Rs. {{ product.productActualPrice }}</span>
+                </div>
+
+                <div class="buy-now mt-4">
+                    <button mat-raised-button class="buynowbtn" (click)="buyProduct(product.productId)">Buy Now</button>
+
+                    <button mat-raised-button class="addtocart "
+                        (click)="addToCart(product.productId)">AddtoCart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

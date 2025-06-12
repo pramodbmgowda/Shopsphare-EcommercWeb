@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+  }
+  tr:hover{
+    background-color: #dbe3ea;
+    
+  }
+
+  .showmore{
+    background: linear-gradient(45deg, #FFD700, #FFB300);;
+  }
+
+  .showmore:hover{
+    background: linear-gradient(45deg, #FFB300, #FFD700);
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.5);
+  }

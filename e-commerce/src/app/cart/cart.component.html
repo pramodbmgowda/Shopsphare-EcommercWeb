@@ -1,0 +1,73 @@
+<!-- <div class="container mt-5">
+    <table mat-table [dataSource]="cartDetails" class="mat-elevation-z8">
+
+
+        <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef>Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.productId.productName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Description">
+            <th mat-header-cell *matHeaderCellDef> Description</th>
+            <td mat-cell *matCellDef="let element"> {{element.productId.productDescription}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ActualPrice">
+            <th mat-header-cell *matHeaderCellDef> ActualPrice</th>
+            <td mat-cell *matCellDef="let element"> {{element.productId.productActualPrice}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Discounted price">
+            <th mat-header-cell *matHeaderCellDef> Discounted price </th>
+            <td mat-cell *matCellDef="let element"> {{element.productId.productDiscountedPrice}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div> -->
+
+<div class="container mt-5">
+
+    <div align="right" class="mb-3">
+        <button mat-raised-button class="checkOut" [disabled]="cartDetails.length === 0">
+            Check-out</button>
+    </div>
+    <table mat-table [dataSource]="cartDetails" class="mat-elevation-z8 mat-table-custom">
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{ element.productId.productName || 'N/A' }} </td>
+        </ng-container>
+
+        <!-- Description Column -->
+        <ng-container matColumnDef="Description">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let element"> {{ element.productId.productDescription || 'N/A' }} </td>
+        </ng-container>
+
+        <!-- Actual Price Column -->
+        <ng-container matColumnDef="ActualPrice">
+            <th mat-header-cell *matHeaderCellDef> Actual Price </th>
+            <td mat-cell *matCellDef="let element"> ₹{{ element.productId.productActualPrice | number:'1.2-2' }} </td>
+        </ng-container>
+
+        <!-- Discounted Price Column -->
+        <ng-container matColumnDef="Discountedprice">
+            <th mat-header-cell *matHeaderCellDef> Discounted Price </th>
+            <td mat-cell *matCellDef="let element"> ₹{{ element.productId.productDiscountedPrice | number:'1.2-2' }}
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Remove</th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button color="warn" (click)="deleteProduct(element.cartId)">
+                    <mat-icon> remove</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- Table Header & Row -->
+        <tr mat-header-row *matHeaderRowDef=" displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+</div>

@@ -1,0 +1,75 @@
+<div class="container mt-5">
+  <div class="card p-4">
+    <h3 class="text-center mb-4">Add New Product</h3>
+
+    <div class="row">
+      <!-- Product Form Section -->
+      <div class="col-md-6">
+        <form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Product Name</mat-label>
+            <input matInput placeholder="Enter product name" [(ngModel)]="product.productName" name="productName"
+              required />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Product Description</mat-label>
+            <textarea matInput rows="3" placeholder="Enter product description" [(ngModel)]="product.productDescription"
+              name="productDescription" required></textarea>
+          </mat-form-field>
+
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Actual Price</mat-label>
+                <input matInput type="number" placeholder="Enter actual price" [(ngModel)]="product.productActualPrice"
+                  name="productActualPrice" required />
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Discounted Price</mat-label>
+                <input matInput type="number" placeholder="Enter discounted price"
+                  [(ngModel)]="product.productDiscountedPrice" name="productDiscountedPrice" />
+              </mat-form-field>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-flex justify-content-between mt-3 " class="buttton-class">
+            <button mat-stroked-button color="warn" type="reset">Clear</button>
+            <button mat-flat-button class="addproduct" color="primary" type="submit" *ngIf="isNewProduct">Add
+              Product</button>
+            <button mat-flat-button class="updateproduct" color="primary" type="submit" *ngIf="!isNewProduct">
+              Update Product
+            </button>
+
+            <p class="view-product-text" *ngIf="!isNewProduct" (click)="updateToProduct()">
+              View Product Details
+            </p>
+          </div>
+        </form>
+      </div>
+
+
+      <!-- Image Upload Section -->
+      <div class="col-md-6">
+        <div class="upload-container">
+          <label class="file-label">
+            <input type="file" #fileInput accept="image/*" multiple (change)="onFileSelected($event)" hidden />
+            <button mat-flat-button color="accent" class="browse" (click)="fileInput.click()">Select Images</button>
+          </label>
+        </div>
+
+        <!-- Image Preview Grid -->
+        <div class="image-preview-grid mt-3" *ngIf="product.productImages.length > 0">
+          <div *ngFor="let file of product?.productImages; let i = index" class="image-item">
+            <img [src]="file?.url" class="product-image" />
+            <button class="remove-btn" class=" remove" (click)="removeImage(i)">×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

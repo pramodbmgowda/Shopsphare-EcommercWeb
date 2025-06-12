@@ -1,0 +1,210 @@
+/* ==== BASE STYLING ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* ==== CONTAINER ==== */
+.register-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==== REGISTRATION CARD ==== */
+.register-card {
+    display: flex;
+    width: 900px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+}
+
+/* ==== LEFT SECTION (GRADIENT) ==== */
+.register-left {
+    flex: 1;
+    background: linear-gradient(to bottom, #3F51B5 , #64B5F6); 
+    padding: 40px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.register-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ==== RIGHT FORM SECTION ==== */
+.register-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ==== FORM TITLES ==== */
+.register-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.register-subtitle {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+/* ==== FORM FIELDS ==== */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* ==== CHECKBOX STYLING ==== */
+.terms {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.terms input {
+    margin-right: 8px;
+}
+
+.terms a {
+    color: #1976D2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* ==== BUTTON DESIGN ==== */
+.register-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    background: linear-gradient(to right,#3F51B5 , #1976D2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.register-btn:hover {
+    background: linear-gradient(to right, #3F51B5 , #2196F3);
+    box-shadow: 0px 0px 12px rgba(33, 150, 243, 0.6);
+}
+
+/* ==== LOGIN LINK ==== */
+
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 768px) {
+    .register-card {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .register-left {
+        display: none;
+    }
+
+    .register-right {
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+/* Style the checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #1976d2; /* Primary blue color */
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Checked state - show a checkmark */
+  input[type="checkbox"]:checked {
+    background-color: #1976d2;
+    border-color: #1976d2;
+  }
+  
+  input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Style the label */
+  label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  /* Hover effect */
+  label:hover {
+    color: #1976d2;
+    text-decoration: underline;
+  }
+  input[name="userName"] {
+    text-transform: lowercase;
+}

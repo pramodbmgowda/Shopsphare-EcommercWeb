@@ -1,0 +1,104 @@
+<mat-toolbar color="primary">
+  <span class="unique-title">Monkez<sup></sup></span>
+  <span class="spacer"></span>
+  <button mat-raised-button color="primary" class="spaceLogin" *ngIf="!isLogedIn()" routerLink="/login">
+    Log in
+  </button>
+  <button mat-raised-button color="primary" class="Registernow" *ngIf="!isLogedIn()" routerLink="/register">
+    Register
+  </button>
+  <button mat-raised-button color="warn" *ngIf="isLogedIn()" (click)="logout()">
+    logout
+  </button>
+</mat-toolbar>
+
+<mat-toolbar color="primary" *ngIf="isLogedIn()">
+  <button mat-mini-fab color="primary" class="home spaced-button" routerLink="">
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <button mat-raised-button *ngIf="!IsAdmin()" class="spaceCart" color="primary" [routerLink]="'/cart'"
+    routerLinkActive="active">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+  <button mat-raised-button *ngIf="!IsAdmin()" class="spaceMyorder" color="primary" [routerLink]="'/myOrder'"
+    routerLinkActive="active">
+    My Orders
+  </button>
+
+  <button mat-raised-button *ngIf="IsAdmin()" color="primary" [routerLink]="'/addNewComponent'"
+    routerLinkActive="active">
+    Add New Product
+  </button>
+  <button mat-raised-button *ngIf="IsAdmin()" class="spaceProduct" color="primary" [routerLink]="'/showProductDetails'"
+    routerLinkActive="active">
+    Product Details
+  </button>
+  <button mat-raised-button *ngIf="IsAdmin()" color="primary" class="spacePlace" [routerLink]="'/adminShowOrder'"
+    routerLinkActive="active">
+    Placed Orders
+  </button>
+</mat-toolbar>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Rwiz</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="''" routerLinkActive="active"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'/user'"
+            routerLinkActive="active"
+            *ngIf="userService.roleMatch(['User'])"
+          >
+            User Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'/admin'"
+            routerLinkActive="active"
+            *ngIf="userService.roleMatch(['Admin'])"
+          >
+            Admin Dashboard
+          </a>
+        </li>
+      </ul> -->
+<!-- <button
+        *ngIf="!isLogedIn()"
+        type="button"
+        class="btn btn-success"
+        routerLink="/login"
+      >
+        Login
+      </button>
+      <button
+        *ngIf="isLogedIn()"
+        type="button"
+        class="btn btn-danger"
+        (click)="logout()"
+      >
+        Logout
+      </button> -->
+<!-- </div>
+  </div>
+</nav> -->
